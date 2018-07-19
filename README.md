@@ -1,2 +1,2 @@
-# C_zombie
-C practice
+# C practice
+Computer zombie
