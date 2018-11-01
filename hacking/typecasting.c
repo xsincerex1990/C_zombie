@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// SYNTAX FOR TYPECASTING: (typecast_data_variable) variable
 // typecasting is a way to temporarily change a variables data type despite how it was defined
 int main() {
 	int a, b;
