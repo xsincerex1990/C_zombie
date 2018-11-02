@@ -1,3 +1,7 @@
+<!-- "Dumb fuzzers" or "mutation fuzzer" is closest to original idea of randomizing input data
+this mutated data can be used to crash software systems -->
+
+
 <?xml version="1.0" encoding="utf-8"?>
 <Peach xmlns="http://peachfuzzer.com/2012/Peach" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://peachfuzzer.com/2012/Peach /peach/peach.xsd">
