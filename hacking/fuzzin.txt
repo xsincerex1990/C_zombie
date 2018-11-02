@@ -1,0 +1,15 @@
+Fuzzing is a strategy to find bugs in software. 
+The idea is to generate a large number of random malformed input for a software to parse and see what happens
+
+Memory access errors are the errors most likely to be exposed when fuzzing software that is written in C/C++
+
+the core problem is often the same: A software reads or writes to wrong memory locations.
+
+Recent versions of the compilers llvm and gcc got a powerful tool to spot memory access bugs. 
+Its called Address Sanitizer (ASan) and it can be enabled at compile time. 
+
+To use Address Sanitizer we need to add the parameter -fsanitize=address to our compiler flags. also use -ggdb to make life easier.
+
+man zzuf  
+
+
