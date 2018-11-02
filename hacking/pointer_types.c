@@ -4,11 +4,21 @@ float *p, **p; // p i s a pointer to float, pp is a pointer to a pointer that po
 
 int (*fp)(int) // fp is a pointer to function with type int(int)
 */
+/* 
+CS = Code Segment (used for IP)
 
-int main() {
+DS = Data Segment (used for MOV)
+
+ES = Destination Segment (used for MOVS, etc.)
+
+SS = Stack Segment (used for SP)
+FS and GS are commonly used by OS kernels to access thread-specific memory
+*/
+
+int main() { //mov    rax,QWORD PTR fs:0x28----mov    QWORD PTR [rbp-0x8],rax---------<main+21>:    xor    eax,eax // XORing an operand with itself changes the operand to 0. This is used to clear a register.
 	int i;
 
-	char char_array[5] = {'a', 'b', 'c', 'd', 'e'};
+	char char_array[5] = {'a', 'b', 'c', 'd', 'e'};  //mov    BYTE PTR [rbp-0xd],0x61
 	int int_array[5] = {1, 2, 3, 4, 5};
 
 	char *char_pointer;
