@@ -1,4 +1,9 @@
 #include <stdio.h>
+/* 
+float *p, **p; // p i s a pointer to float, pp is a pointer to a pointer that points to float
+
+int (*fp)(int) // fp is a pointer to function with type int(int)
+*/
 
 int main() {
 	int i;
