@@ -8,8 +8,8 @@ void usage(char *program_name) {
 int main(int argc, char *argv[]) {
     int i, count;
 
-    if(argc < 3) //if fewer than 3 arguments is used 
-        usage(argv[0]); // display usage message and exit
+   // if(argc < 3) //if fewer than 3 arguments is used 
+     //   usage(argv[0]); // display usage message and exit
     
     count = atoi(argv[2]); //convert the second arg into an  interger
     printf("Repeating %d times\n", count);
