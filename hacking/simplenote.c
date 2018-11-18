@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 
-void usage(char *prof_name, char *filename) {
+void usage(char *prog_name, char *filename) {
 	printf("Usage: %s <data to add to %s>\n", prog_name, filename);
 	exit(0);
 }
@@ -12,7 +12,7 @@ void usage(char *prof_name, char *filename) {
 void fatal(char *); // a func for fatal errors
 void *ec_malloc(unsigned int); // a error checked malloc() wrapper
 
-int main(int argc, char *argv[]) }
+int main(int argc, char *argv[]) {
 int fd; // file descriptor
 char *buffer, *datafile;
 
@@ -37,7 +37,38 @@ if (argc < 2) //check to see if theres command line args
 	    fatal("in main() while opening file");
 	printf("[DEBUG] file descriptor is in %d\n", fd);
 
-	//write data
+	//writing data
+	if(write(fd, buffer, strlen(buffer)) == -1)
+		fatal("in main() while writing buffer to file");
+	//closing file
+	if(close(fd) == -1)
+		fatal("In main while closing file");
+	
+	printf("Note has been saved\n");
+	free(buffer);
+	free(datafile);
+}
+
+//A void function to display error message and exit
+void fatal(char *message) {
+	char error_message[100];
+	
+	strcpy(error_message, "[!!] Fatal error ");
+	strncat(error_message, message, 83);
+	perror(error_message);
+	exit(-1);
+}
+
+// An error checked malloc() wrapper function
+void *ec_malloc(unsigned int size) {
+	void *ptr;
+	ptr = malloc(size);
+	if (ptr == NULL)
+		fatal("in ec_malloc() on memory allocation");
+	return ptr;
+}
+
+
 
 
 
