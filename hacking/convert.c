@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <bits/libc-header-start.h>
 void usage(char *program_name) {
     printf("Usage: %s <message> <# of times to repeat>\n", program_name);
     exit(1);
