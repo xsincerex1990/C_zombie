@@ -1,0 +1,17 @@
+Q: what is a stack?
+A: A stack is a abstract data type frequently used is CS. Its a contiguos block of memory containing data. 
+A stack of objects has the property that the last object placed on the stack will be the first object removed. (FILO)
+
+Q: Why use a stack?
+A: Modern-computers are built with high-level programming languages in mind.
+the most important technique of structuring programs introduced by high level languages is the procedure or function. A procedure call alters the flow of control like jmp does but unlike a jmp it, when finished performing a task a function returns control to the statement or instruction following the call. this is done with the help of the stack.
+
+The stack is also used to dynamically allocate the local variables used in
+functions, to pass parameters to the functions, and to return values from the
+function.
+
+register SP points to top of the stack.
+The bottom of stack is a fixed address. Its size is dynamically adjusted by the kernel at runtime. The CPU implements intructions to PUSH or POP of the stack.
+
+TOP OF STACK IS THW LOWEST NUMERICAL ADDRESS.
+
