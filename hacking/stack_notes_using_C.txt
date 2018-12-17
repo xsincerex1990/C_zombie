@@ -1,0 +1,37 @@
+C has 3 different pools of memory: Static, Stack, Heap.
+
+--STATIC MEMORY---
+
+Static memory persist through out the entire life of the program and is usually used to store things like global variables, or variables created with the 'static' clause. for example: 
+
+int tf;
+
+On many systems this variable uses 4 bytes of memory. This memory can come from one of two places. Global variables are static and theres only one copy for entire program. inside a function the variable is allocated on the stack.
+
+its possible to use the "static" clause to force it to be stored in static memory eg:
+
+static int tf;
+
+-----STACK MEMORY-------
+
+
+The stack is used to store varibles inside of functions including main(); It's LIFO structure.
+very time a function declares a new variable it is “pushed” onto the stack.Then when a function finishes running, all the variables associated with that function on the stack are deleted, and the memory they use is freed up.
+
+
+The stack is managed by the CPU, there is no ability to modify it.
+Variables are allocated and freed automatically.
+The stack it not limitless – most have an upper bound.
+The stack grows and shrinks as variables are created and destroyed.
+Stack variables only exist whilst the function that created them exists.
+
+----HEAP MEMORY--------
+
+The heap is a large pool of memory that can be used dynamically.
+
+
+The heap is managed by the programmer, the ability to modify it is somewhat boundless.
+In C, variables are allocated and freed using functions like malloc() and free().
+The heap is large, and is usually limited by the physical memory available.
+The heap requires pointers to access it.
+
