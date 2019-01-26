@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-    int num, lnum, last_result;
+    int num, lnum, last_result = 0;
     printf("ENTER A NUMBER:\n");
     scanf("%i", &num);
     
@@ -12,5 +12,5 @@ int main(void) {
     }
     while (num != 0);
     printf("%i\n", last_result);
-;    return 0;
+    return 0;
 }
