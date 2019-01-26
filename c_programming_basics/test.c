@@ -5,10 +5,10 @@ int main(void) {
 
     printf ("Type in your number: ");
     scanf("%i", &number);
-
+    
     if (number < 0)
         number = -number;
     printf ("The absolute value is %i\n", number);
 
     return 0;
-}
+};
