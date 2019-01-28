@@ -22,7 +22,7 @@ int main(void) {
     }
 
     average = (float) gradeTotal / numberofgrades;
-
+    /*.2 is to display average value to two decimal places*/
     printf("\nGrade average = %.2f\n", average);
     printf("Number of failures = %i\n", fails);
 
