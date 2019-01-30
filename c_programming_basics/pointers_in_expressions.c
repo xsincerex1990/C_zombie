@@ -2,10 +2,11 @@
 
 int main (void) {
     int i1, i2;
-    int *p1, *p2;
+    int *p1, *p2;   
 
     i1 = 5;
     p1 = &i1;
+    //the * and & operator have a higher precedence than all binary operators in C
     i2 = *p1 / 2 + 10;
     p2 = p1;
 
