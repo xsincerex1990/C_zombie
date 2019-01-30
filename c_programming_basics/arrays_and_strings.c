@@ -3,12 +3,11 @@
 int main(void) {
 
     int numbers[4] = {0};
-    char name[4] = {"a"};
+    char name[4] = {"name"};
+    printf("Undefined int array elements: %d %d %d %d\n", numbers[0], numbers[1], numbers[2], numbers[3]);
 
-    printf("Numbers: %d %d %d %d\n", numbers[0], numbers[1], numbers[2], numbers[3]);
-
-    printf("name each: %c %c %c %c\n", name[0], name[1], name[2], name[3]);
-    printf("name: %s\n", name);
+    printf("Undefined name elements: %c %c %c %c\n", name[0], name[1], name[2], name[3]);
+    printf("Undefinedname: %s\n\n", name);
 
     //set up numbers
     numbers[0] = 1;
@@ -25,19 +24,19 @@ int main(void) {
 
     //print them out initialized
 
-    printf("numbers: %d %d %d %d\n", numbers[0], numbers[1], numbers[2], numbers[3]);
-    printf("name each: %c %c %c %c\n", name[0], name[1], name[2], name[3]);
+    printf("Defined numbers: %d %d %d %d\n", numbers[0], numbers[1], numbers[2], numbers[3]);
+    printf("Defined name each: %c %c %c %c\n", name[0], name[1], name[2], name[3]);
 
     //print it like a string 
-    printf("name: %s\n", name);
+    printf("Defined name: %s\n\n", name);
 
     //another way to use name
 
     char *another = "Zed";
-    printf("another: %s\n", another);
+    printf("Another: %s\n", another);
 
-    printf("another each: %c %c %c %c\n", another[0], another[1], another[2], another[3]);
-
+    printf("Another each: %c %c %c %c\n", another[0], another[1], another[2], another[3]);
+     
     return 0;
     
 }
